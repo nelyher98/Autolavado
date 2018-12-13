@@ -134,18 +134,18 @@ namespace Autolavado
             MessageBox.Show("Eliminado", "Registro eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             cerrarConexion();
         }
-        public void ActualizarProductos(Usuario u,int id)
+        public void ActualizarProductos(Usuario u, int id)
         {
             MySqlConnection con = conectar();
             string consulta = "UPDATE producto " +
                 " SET nombre ='" + u.getNombreEmp() + "'," +
                 " cantidad='" + u.getCantidad() + "'," +
-                " precio='"+u.getPrecio()+"' WHERE idProducto=" + id;
+                " precio='" + u.getPrecio() + "' WHERE idProducto=" + id;
             MySqlCommand comando = new MySqlCommand(consulta, con);
             MySqlDataReader resultado;
             abrirConexion();
             resultado = comando.ExecuteReader();
-            MessageBox.Show("Registro actualizado correctamente","Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Registro actualizado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cerrarConexion();
 
         }
@@ -154,8 +154,8 @@ namespace Autolavado
             MySqlConnection con = conectar();
             string consulta = "INSERT INTO carro" +
                 "(placa,tipo,nombre,apellidos,fecha_N)" +
-                "VALUES('" + u.getPlaca()+ "','" + u.getTipo()+ "','"
-                +u.getNombreEmp() + "','" + u.getApellido()+ "','"+ u.getfecha()+"');";
+                "VALUES('" + u.getPlaca() + "','" + u.getTipo() + "','"
+                + u.getNombreEmp() + "','" + u.getApellido() + "','" + u.getfecha() + "');";
             MySqlCommand comando = new MySqlCommand(consulta, con);
             MySqlDataReader resultado;
             abrirConexion();
@@ -178,7 +178,8 @@ namespace Autolavado
                 resultado = comando.ExecuteReader();
                 MessageBox.Show("Registro actualizado correctamente", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cerrarConexion();
-            }catch(MySqlException r)
+            }
+            catch (MySqlException r)
             {
                 MessageBox.Show(r.Message);
             }
@@ -186,7 +187,7 @@ namespace Autolavado
         public void EliminarPlac(string g)
         {
             MySqlConnection con = conectar();
-            MySqlCommand consulta = new MySqlCommand("DELETE FROM carro WHERE placa = '"+g+"'", con);
+            MySqlCommand consulta = new MySqlCommand("DELETE FROM carro WHERE placa = '" + g + "'", con);
             MySqlDataReader ejecución;
             abrirConexion();
             ejecución = consulta.ExecuteReader();
@@ -214,15 +215,15 @@ namespace Autolavado
             c = "";
             if (g != "")
             {
-                c=c+g;
+                c = c + g;
             }
             if (h != "")
             {
-                c = c+"," + h;
+                c = c + "," + h;
             }
             if (z != "")
             {
-                c = c +"," + z;
+                c = c + "," + z;
             }
             if (q != "")
             {
@@ -234,7 +235,7 @@ namespace Autolavado
                 MySqlConnection con = conectar();
                 string consulta = "INSERT INTO ticket" +
                     "(placa_i,emple_no,tipo,total,fecha_t)" +
-                    "VALUES('" + u.getPlaca() + "','" + u.getNombreEmp() +"','"+c+"','"+u.getPrecio()+"','"+b+"');";
+                    "VALUES('" + u.getPlaca() + "','" + u.getNombreEmp() + "','" + c + "','" + u.getPrecio() + "','" + b + "');";
                 MySqlCommand comando = new MySqlCommand(consulta, con);
                 MySqlDataReader resultado;
                 abrirConexion();
@@ -258,7 +259,7 @@ namespace Autolavado
         public void InsertarAdm(Usuario u)
         {
             MySqlConnection c = conectar();
-            consulta = "INSERT INTO encargado"+"(usuario,contraseña,Nombre,Apellidos)"+
+            consulta = "INSERT INTO encargado" + "(usuario,contraseña,Nombre,Apellidos)" +
             "VALUES('" + u.getNombreEnc() + "','" + u.getContraseña() + "','" + u.getNombreEmp() + "','" + u.getApellido() + "');";
             MySqlCommand comando = new MySqlCommand(consulta, c);
             MySqlDataReader resultado;
@@ -270,7 +271,7 @@ namespace Autolavado
         public void EliminarAdm(string d)
         {
             MySqlConnection con = conectar();
-            MySqlCommand consulta = new MySqlCommand("DELETE FROM encargado WHERE usuario ='"+ d +"'", con);
+            MySqlCommand consulta = new MySqlCommand("DELETE FROM encargado WHERE usuario ='" + d + "'", con);
             MySqlDataReader ejecución;
             abrirConexion();
             ejecución = consulta.ExecuteReader();
@@ -282,8 +283,8 @@ namespace Autolavado
             MySqlConnection con = conectar();
             string consulta = "UPDATE encargado " +
                 " SET contraseña ='" + u.getContraseña() + "'," +
-                " Nombre = '"+u.getNombreEmp()+"',"+
-                " Apellidos ='" + u.getApellido() + "' WHERE usuario ='"+i+"'";
+                " Nombre = '" + u.getNombreEmp() + "'," +
+                " Apellidos ='" + u.getApellido() + "' WHERE usuario ='" + i + "'";
             MySqlCommand comando = new MySqlCommand(consulta, con);
             MySqlDataReader resultado;
             abrirConexion();

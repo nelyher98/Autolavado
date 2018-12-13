@@ -48,8 +48,14 @@ namespace Autolavado
                 filename = GuardarPDF.FileName;
                 PdfWriter.GetInstance(reporte, new FileStream(filename, FileMode.Create));
                 reporte.Open();
+
+                //ADDING TITLE
                 reporte.Add(new Paragraph("Autolavado Tuzo Express"));
+
                 PdfPTable consulta = new PdfPTable(DataInforme.Columns.Count);
+
+               
+
                 int h;
                 int i;
                 int k;
