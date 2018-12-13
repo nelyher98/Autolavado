@@ -57,5 +57,10 @@ namespace Autolavado
             this.Hide();
             n.Show();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

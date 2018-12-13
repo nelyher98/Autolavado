@@ -50,8 +50,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(599, 46);
+            this.panel1.Size = new System.Drawing.Size(799, 57);
             this.panel1.TabIndex = 22;
             // 
             // label1
@@ -59,18 +60,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(94, 9);
+            this.label1.Location = new System.Drawing.Point(125, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 25);
+            this.label1.Size = new System.Drawing.Size(134, 31);
             this.label1.TabIndex = 12;
             this.label1.Text = "Inventario";
             // 
             // panel4
             // 
             this.panel4.BackgroundImage = global::Autolavado.Properties.Resources.Logopaginas;
-            this.panel4.Location = new System.Drawing.Point(13, 4);
+            this.panel4.Location = new System.Drawing.Point(17, 5);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(75, 42);
+            this.panel4.Size = new System.Drawing.Size(100, 52);
             this.panel4.TabIndex = 11;
             // 
             // panel2
@@ -81,18 +84,21 @@
             this.panel2.Controls.Add(this.BtnEliminar);
             this.panel2.Controls.Add(this.BtnNuevo);
             this.panel2.Controls.Add(this.BtnMod);
-            this.panel2.Location = new System.Drawing.Point(-1, 45);
+            this.panel2.Location = new System.Drawing.Point(-1, 55);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(599, 322);
+            this.panel2.Size = new System.Drawing.Size(799, 396);
             this.panel2.TabIndex = 23;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.panel3.Controls.Add(this.DataGridInventario);
-            this.panel3.Location = new System.Drawing.Point(27, 10);
+            this.panel3.Location = new System.Drawing.Point(36, 12);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(536, 244);
+            this.panel3.Size = new System.Drawing.Size(715, 300);
             this.panel3.TabIndex = 14;
             // 
             // DataGridInventario
@@ -100,19 +106,21 @@
             this.DataGridInventario.AllowUserToAddRows = false;
             this.DataGridInventario.AllowUserToDeleteRows = false;
             this.DataGridInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridInventario.Location = new System.Drawing.Point(23, 19);
+            this.DataGridInventario.Location = new System.Drawing.Point(31, 23);
+            this.DataGridInventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DataGridInventario.Name = "DataGridInventario";
             this.DataGridInventario.ReadOnly = true;
-            this.DataGridInventario.Size = new System.Drawing.Size(493, 198);
+            this.DataGridInventario.Size = new System.Drawing.Size(657, 244);
             this.DataGridInventario.TabIndex = 0;
             // 
             // BtnMenu
             // 
             this.BtnMenu.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.BtnMenu.Image = global::Autolavado.Properties.Resources.button;
-            this.BtnMenu.Location = new System.Drawing.Point(433, 260);
+            this.BtnMenu.Location = new System.Drawing.Point(577, 320);
+            this.BtnMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnMenu.Name = "BtnMenu";
-            this.BtnMenu.Size = new System.Drawing.Size(86, 32);
+            this.BtnMenu.Size = new System.Drawing.Size(115, 39);
             this.BtnMenu.TabIndex = 5;
             this.BtnMenu.Text = "Menú";
             this.BtnMenu.UseVisualStyleBackColor = true;
@@ -122,9 +130,10 @@
             // 
             this.BtnEliminar.ForeColor = System.Drawing.Color.Black;
             this.BtnEliminar.Image = global::Autolavado.Properties.Resources.button1;
-            this.BtnEliminar.Location = new System.Drawing.Point(307, 260);
+            this.BtnEliminar.Location = new System.Drawing.Point(409, 320);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(86, 32);
+            this.BtnEliminar.Size = new System.Drawing.Size(115, 39);
             this.BtnEliminar.TabIndex = 4;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
@@ -134,9 +143,10 @@
             // 
             this.BtnNuevo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnNuevo.Image = global::Autolavado.Properties.Resources.button;
-            this.BtnNuevo.Location = new System.Drawing.Point(181, 260);
+            this.BtnNuevo.Location = new System.Drawing.Point(241, 320);
+            this.BtnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(86, 32);
+            this.BtnNuevo.Size = new System.Drawing.Size(115, 39);
             this.BtnNuevo.TabIndex = 3;
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = true;
@@ -146,9 +156,10 @@
             // 
             this.BtnMod.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnMod.Image = global::Autolavado.Properties.Resources.button;
-            this.BtnMod.Location = new System.Drawing.Point(55, 260);
+            this.BtnMod.Location = new System.Drawing.Point(73, 320);
+            this.BtnMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnMod.Name = "BtnMod";
-            this.BtnMod.Size = new System.Drawing.Size(86, 32);
+            this.BtnMod.Size = new System.Drawing.Size(115, 39);
             this.BtnMod.TabIndex = 2;
             this.BtnMod.Text = "Modificar";
             this.BtnMod.UseVisualStyleBackColor = true;
@@ -156,13 +167,13 @@
             // 
             // Inventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 366);
+            this.ClientSize = new System.Drawing.Size(795, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventario";

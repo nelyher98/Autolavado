@@ -76,22 +76,33 @@ namespace Autolavado
             }
         }
 
+        //VERIFICATION
         private void btnActPro_Click(object sender, EventArgs e)
         {
 
-            u.setNombreEmp(txtNombre.Text);
-            u.setCantidad(int.Parse(txtCantidad.Text));
-            u.setPrecio(float.Parse(txtPrecio.Text));
-            int i = int.Parse(CBActualizar.SelectedItem.ToString());
-            try{
-                t.ActualizarProductos(u, i);
-            }catch(MySqlException r)
+            if (txtNombre.Text != "" && txtCantidad.Text != "" && txtPrecio.Text != "" && CBActualizar.SelectedIndex > -1)
             {
-                MessageBox.Show(r.Message);
+                u.setNombreEmp(txtNombre.Text);
+                u.setCantidad(int.Parse(txtCantidad.Text));
+                u.setPrecio(float.Parse(txtPrecio.Text));
+                int i = int.Parse(CBActualizar.SelectedItem.ToString());
+                try
+                {
+                    t.ActualizarProductos(u, i);
+                }
+                catch (MySqlException r)
+                {
+                    MessageBox.Show(r.Message);
+                }
+                Inventario o = new Inventario();
+                this.Hide();
+                o.Show();
             }
-            Inventario o = new Inventario();
-            this.Hide();
-            o.Show();
+            else
+            {
+                MessageBox.Show("No se han ingresado todos los datos");
+            }
+
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)

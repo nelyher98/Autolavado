@@ -89,23 +89,32 @@ namespace Autolavado
             }
         }
 
+
+        //VERIFICATION
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            string g;
-            g = CombAEm.SelectedItem.ToString();
-            q.setContraseña(TxtContra.Text);
-            q.setNombreEmp(txtNombre.Text);
-            q.setApellido(txtApellido.Text);
-            try
+            if (CombAEm.SelectedIndex > -1 && TxtContra.Text != "" && txtNombre.Text != "" && txtApellido.Text != "")
             {
-                u.ActualizaAdnm(q, g);
-            }catch(MySqlException r)
-            {
-                MessageBox.Show(r.Message);
+                string g;
+                g = CombAEm.SelectedItem.ToString();
+                q.setContraseña(TxtContra.Text);
+                q.setNombreEmp(txtNombre.Text);
+                q.setApellido(txtApellido.Text);
+                try
+                {
+                    u.ActualizaAdnm(q, g);
+                } catch (MySqlException r)
+                {
+                    MessageBox.Show(r.Message);
+                }
+                VerAdm n = new VerAdm();
+                this.Hide();
+                n.Show();
             }
-            VerAdm n = new VerAdm();
-            this.Hide();
-            n.Show();
+            else
+            {
+                MessageBox.Show("No se han ingresado todos los datos");
+            }
         }
     }
 }
