@@ -78,6 +78,7 @@ namespace Autolavado
 
         private void btnActPro_Click(object sender, EventArgs e)
         {
+
             u.setNombreEmp(txtNombre.Text);
             u.setCantidad(int.Parse(txtCantidad.Text));
             u.setPrecio(float.Parse(txtPrecio.Text));

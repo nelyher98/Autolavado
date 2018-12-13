@@ -34,15 +34,22 @@ namespace Autolavado
 
         private void btnActual_Click(object sender, EventArgs e)
         {
-            string p;
-            p = CBActualizarP.SelectedItem.ToString();
-            u.setTipo(CBTipo.SelectedItem.ToString());
-            u.setNombreEmp(txtNombre.Text);
-            u.setFecha(FechaPlaca.Value.ToString("yyyy-MM-dd"));
-            TU.ActualizarPlac(u, p);
-            Actualizada Act = new Actualizada();
-            Act.Visible = true;
-            this.Visible = false;
+            if (CBTipo.SelectedIndex > -1 || txtNombre.Text != "")
+            {
+                string p;
+                p = CBActualizarP.SelectedItem.ToString();
+                u.setTipo(CBTipo.SelectedItem.ToString());
+                u.setNombreEmp(txtNombre.Text);
+                u.setFecha(FechaPlaca.Value.ToString("yyyy-MM-dd"));
+                TU.ActualizarPlac(u, p);
+                Actualizada Act = new Actualizada();
+                Act.Visible = true;
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("No se han ingresado todos los datos");
+            }
         }
 
         private void Actualizar_Load(object sender, EventArgs e)
