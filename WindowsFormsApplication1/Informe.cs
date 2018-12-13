@@ -50,12 +50,23 @@ namespace Autolavado
                 reporte.Open();
 
                 //ADDING TITLE
-                reporte.Add(new Paragraph("Autolavado Tuzo Express"));
+                Paragraph para = new Paragraph("Autolavado Tuzo Express", FontFactory.GetFont("Arial", 16, iTextSharp.text.Font.BOLD, BaseColor.BLACK));
+                para.Alignment = Element.ALIGN_CENTER;
+
+                para.SpacingAfter = 10f;
+                reporte.Add(para);
+            
+
+                //IMAGE
+                iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance("D:\\Users\\almej\\Documents\\GitHub\\Autolavado2\\Logo.jpg");
+
+                jpg.ScaleToFit(120f, 120f);
+                jpg.Alignment = Element.ALIGN_MIDDLE;
+                jpg.SpacingBefore = 10f;
+
+                reporte.Add(jpg);
 
                 PdfPTable consulta = new PdfPTable(DataInforme.Columns.Count);
-
-               
-
                 int h;
                 int i;
                 int k;
@@ -74,6 +85,7 @@ namespace Autolavado
                         }
                     }
                 }
+                consulta.SpacingBefore = 10f;
                 reporte.Add(consulta);
                 reporte.Close();
             }

@@ -38,4 +38,4 @@ CREATE TABLE Producto(
  idProducto    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  nombre        VARCHAR(100),
  cantidad      INT,
- precio        FLOAT(5,2);
+ precio        FLOAT(5,2));
