@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Autolavado
 {
     public partial class Informe : Form
@@ -35,6 +36,7 @@ namespace Autolavado
         private void BntGene_Click(object sender, EventArgs e)
         {
             string filename;
+
             Document reporte = new Document();
             SaveFileDialog GuardarPDF = new SaveFileDialog();
             GuardarPDF.InitialDirectory = @"C:";
@@ -55,10 +57,10 @@ namespace Autolavado
 
                 para.SpacingAfter = 10f;
                 reporte.Add(para);
-            
+
 
                 //IMAGE
-                iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance("D:\\Users\\almej\\Documents\\GitHub\\Autolavado2\\Logo.jpg");
+                    iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance("D:\\Users\\almej\\Documents\\GitHub\\Autolavado2\\Logo.jpg");
 
                 jpg.ScaleToFit(120f, 120f);
                 jpg.Alignment = Element.ALIGN_MIDDLE;

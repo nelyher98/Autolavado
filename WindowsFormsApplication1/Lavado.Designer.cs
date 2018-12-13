@@ -74,7 +74,7 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(36, 12);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(715, 300);
             this.panel4.TabIndex = 15;
@@ -82,7 +82,8 @@
             // TxtLavado
             // 
             this.TxtLavado.Location = new System.Drawing.Point(268, 145);
-            this.TxtLavado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtLavado.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtLavado.MaxLength = 4;
             this.TxtLavado.Name = "TxtLavado";
             this.TxtLavado.Size = new System.Drawing.Size(163, 22);
             this.TxtLavado.TabIndex = 40;
@@ -91,7 +92,8 @@
             // TxtPulido
             // 
             this.TxtPulido.Location = new System.Drawing.Point(268, 177);
-            this.TxtPulido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtPulido.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtPulido.MaxLength = 4;
             this.TxtPulido.Name = "TxtPulido";
             this.TxtPulido.Size = new System.Drawing.Size(163, 22);
             this.TxtPulido.TabIndex = 39;
@@ -100,7 +102,8 @@
             // TxtEncerado
             // 
             this.TxtEncerado.Location = new System.Drawing.Point(268, 209);
-            this.TxtEncerado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEncerado.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtEncerado.MaxLength = 4;
             this.TxtEncerado.Name = "TxtEncerado";
             this.TxtEncerado.Size = new System.Drawing.Size(163, 22);
             this.TxtEncerado.TabIndex = 38;
@@ -109,7 +112,8 @@
             // TxtLavadoM
             // 
             this.TxtLavadoM.Location = new System.Drawing.Point(268, 241);
-            this.TxtLavadoM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtLavadoM.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtLavadoM.MaxLength = 4;
             this.TxtLavadoM.Name = "TxtLavadoM";
             this.TxtLavadoM.Size = new System.Drawing.Size(163, 22);
             this.TxtLavadoM.TabIndex = 37;
@@ -119,7 +123,7 @@
             // 
             this.LavadoMotorCheck.AutoSize = true;
             this.LavadoMotorCheck.Location = new System.Drawing.Point(96, 241);
-            this.LavadoMotorCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LavadoMotorCheck.Margin = new System.Windows.Forms.Padding(4);
             this.LavadoMotorCheck.Name = "LavadoMotorCheck";
             this.LavadoMotorCheck.Size = new System.Drawing.Size(137, 21);
             this.LavadoMotorCheck.TabIndex = 36;
@@ -131,7 +135,7 @@
             // 
             this.EnceradoCheck.AutoSize = true;
             this.EnceradoCheck.Location = new System.Drawing.Point(96, 209);
-            this.EnceradoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EnceradoCheck.Margin = new System.Windows.Forms.Padding(4);
             this.EnceradoCheck.Name = "EnceradoCheck";
             this.EnceradoCheck.Size = new System.Drawing.Size(91, 21);
             this.EnceradoCheck.TabIndex = 35;
@@ -143,7 +147,7 @@
             // 
             this.PulidoCheck.AutoSize = true;
             this.PulidoCheck.Location = new System.Drawing.Point(96, 177);
-            this.PulidoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PulidoCheck.Margin = new System.Windows.Forms.Padding(4);
             this.PulidoCheck.Name = "PulidoCheck";
             this.PulidoCheck.Size = new System.Drawing.Size(69, 21);
             this.PulidoCheck.TabIndex = 34;
@@ -155,7 +159,7 @@
             // 
             this.LavadoCheck.AutoSize = true;
             this.LavadoCheck.Location = new System.Drawing.Point(96, 149);
-            this.LavadoCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LavadoCheck.Margin = new System.Windows.Forms.Padding(4);
             this.LavadoCheck.Name = "LavadoCheck";
             this.LavadoCheck.Size = new System.Drawing.Size(77, 21);
             this.LavadoCheck.TabIndex = 33;
@@ -166,7 +170,7 @@
             // TxtTotal
             // 
             this.TxtTotal.Location = new System.Drawing.Point(533, 256);
-            this.TxtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.TxtTotal.Name = "TxtTotal";
             this.TxtTotal.ReadOnly = true;
             this.TxtTotal.Size = new System.Drawing.Size(163, 22);
@@ -187,7 +191,7 @@
             // 
             this.ComBLavador.FormattingEnabled = true;
             this.ComBLavador.Location = new System.Drawing.Point(268, 81);
-            this.ComBLavador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComBLavador.Margin = new System.Windows.Forms.Padding(4);
             this.ComBLavador.Name = "ComBLavador";
             this.ComBLavador.Size = new System.Drawing.Size(292, 24);
             this.ComBLavador.TabIndex = 30;
@@ -207,7 +211,7 @@
             // 
             this.ComBPlacas.FormattingEnabled = true;
             this.ComBPlacas.Location = new System.Drawing.Point(268, 20);
-            this.ComBPlacas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComBPlacas.Margin = new System.Windows.Forms.Padding(4);
             this.ComBPlacas.Name = "ComBPlacas";
             this.ComBPlacas.Size = new System.Drawing.Size(292, 24);
             this.ComBPlacas.TabIndex = 27;
@@ -240,7 +244,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(-4, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 57);
             this.panel1.TabIndex = 26;
@@ -261,7 +265,7 @@
             // 
             this.panel3.BackgroundImage = global::Autolavado.Properties.Resources.Logopaginas;
             this.panel3.Location = new System.Drawing.Point(17, 5);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(100, 52);
             this.panel3.TabIndex = 1;
@@ -273,7 +277,7 @@
             this.panel2.Controls.Add(this.btnSalirProp);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Location = new System.Drawing.Point(-4, 55);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(796, 396);
             this.panel2.TabIndex = 27;
@@ -282,7 +286,7 @@
             // 
             this.BtnNuevo.Image = global::Autolavado.Properties.Resources.button__1_;
             this.BtnNuevo.Location = new System.Drawing.Point(592, 341);
-            this.BtnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(115, 39);
             this.BtnNuevo.TabIndex = 19;
@@ -311,7 +315,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Lavado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lavado";

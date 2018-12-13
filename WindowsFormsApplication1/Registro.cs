@@ -33,6 +33,7 @@ namespace Autolavado
             if (TxtPlaca.Text != "" && CBTipo.SelectedIndex > -1 )
             {
                 u.setPlaca(TxtPlaca.Text);
+            
                 u.setTipo(CBTipo.SelectedItem.ToString());
                 u.setNombreEmp(TxtNombre.Text);
                 u.setApellido(TxtApellidos.Text);

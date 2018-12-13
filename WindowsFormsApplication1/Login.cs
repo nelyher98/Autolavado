@@ -22,13 +22,9 @@ namespace Autolavado
             if (txtUsuario.Text=="Hola" && txtContra.Text=="1234") {
                 MessageBox.Show("Usuario correcto","CORRECTO",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
-                MenuPropietario l = new MenuPropietario();
-                l.Show();
-                this.Visible = false;
-
-                /* Loader M = new Loader();
+                 Loader M = new Loader();
                  this.Visible = false;
-                 M.Visible = true;*/
+                 M.Visible = true;
             }
             else
             {
