@@ -49,13 +49,22 @@ namespace Autolavado
             this.Visible = false;
         }
 
+        //VERIFICATION
         private void btnElim_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(CBEliPro.SelectedItem.ToString());
-            t.EliminarPro(id);
-            Inventario u = new Inventario();
-            this.Hide();
-            u.Show();
+            if (CBEliPro.SelectedIndex > -1)
+            {
+                int id = int.Parse(CBEliPro.SelectedItem.ToString());
+                t.EliminarPro(id);
+                Inventario u = new Inventario();
+                this.Hide();
+                u.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado el ID del artículo a eliminar");
+            }
+
         }
     }
 }

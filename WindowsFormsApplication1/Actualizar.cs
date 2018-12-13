@@ -32,6 +32,7 @@ namespace Autolavado
             this.Visible = false;
         }
 
+        //VERIFICATION
         private void btnActual_Click(object sender, EventArgs e)
         {
             if (CBTipo.SelectedIndex > -1 || txtNombre.Text != "")

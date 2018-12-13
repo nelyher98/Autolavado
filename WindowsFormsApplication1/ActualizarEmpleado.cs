@@ -42,24 +42,34 @@ namespace Autolavado
                 MessageBox.Show(h.Message); }
         }
 
+        //VERIFICATION
         private void btnActualizar_Click(object sender, EventArgs e)
         {
 
-            u.setNombreEmp(txtNombre.Text);
-            u.setApellido(txtApellido.Text);
-            idUsuario = Convert.ToInt32(CombAEm.SelectedItem.ToString());
+            if (txtNombre.Text != "" && txtApellido.Text != "" && CombAEm.SelectedIndex > -1)
+            {
 
-            try
-            {
-              TU.ActualizarEmp(u, idUsuario);
+                u.setNombreEmp(txtNombre.Text);
+                u.setApellido(txtApellido.Text);
+                idUsuario = Convert.ToInt32(CombAEm.SelectedItem.ToString());
+
+                try
+                {
+                    TU.ActualizarEmp(u, idUsuario);
+                }
+                catch (MySqlException r)
+                {
+                    MessageBox.Show(r.Message);
+                }
+                VerEmpleado n = new VerEmpleado();
+                this.Hide();
+                n.Show();
+
             }
-            catch (MySqlException r)
+            else
             {
-                MessageBox.Show(r.Message);
-            }
-            VerEmpleado n = new VerEmpleado();
-            this.Hide();
-            n.Show();
+                MessageBox.Show("No se han  registrado algunos datos");
+;            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

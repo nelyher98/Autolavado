@@ -46,16 +46,24 @@ namespace Autolavado
             n.Show();
         }
 
+        //VERIFICATION
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            u.setNombreEnc(TxtUsuario.Text);
-            u.setContraseña(TxtContra.Text);
-            u.setNombreEmp(txtNombre.Text);
-            u.setApellido(txtApellido.Text);
-            tu.InsertarAdm(u);
-            VerAdm n = new VerAdm();
-            this.Hide();
-            n.Show();
+            if (TxtUsuario.Text != "" && TxtContra.Text != "" && txtNombre.Text != "" && txtApellido.Text != "")
+            {
+                u.setNombreEnc(TxtUsuario.Text);
+                u.setContraseña(TxtContra.Text);
+                u.setNombreEmp(txtNombre.Text);
+                u.setApellido(txtApellido.Text);
+                tu.InsertarAdm(u);
+                VerAdm n = new VerAdm();
+                this.Hide();
+                n.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se ha ingresado algun dato");
+            }
         }
     }
 }

@@ -27,23 +27,31 @@ namespace Autolavado
 
         }
 
+        //VERIFICATION
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            u.setPlaca(TxtPlaca.Text);
-            u.setTipo(CBTipo.SelectedItem.ToString());
-            u.setNombreEmp(TxtNombre.Text);
-            u.setApellido(TxtApellidos.Text);
-            u.setFecha(FechaData.Value.ToString("yyyy-MM-dd"));
-            try
+            if (TxtPlaca.Text != "" && CBTipo.SelectedIndex > -1 )
             {
-                TU.InsertarPlac(u);
-            }catch(MySqlException z)
-            {
-                MessageBox.Show(z.Message);
+                u.setPlaca(TxtPlaca.Text);
+                u.setTipo(CBTipo.SelectedItem.ToString());
+                u.setNombreEmp(TxtNombre.Text);
+                u.setApellido(TxtApellidos.Text);
+                u.setFecha(FechaData.Value.ToString("yyyy-MM-dd"));
+                try
+                {
+                    TU.InsertarPlac(u);
+                } catch (MySqlException z)
+                {
+                    MessageBox.Show(z.Message);
+                }
+                UsuarioRegistrado r = new UsuarioRegistrado();
+                r.Show();
+                this.Hide();
             }
-            UsuarioRegistrado r = new UsuarioRegistrado();
-            r.Show();
-            this.Hide();
+            else
+            {
+                MessageBox.Show("No se han ingresado algunos datos");
+            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

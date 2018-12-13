@@ -43,13 +43,21 @@ namespace Autolavado
             }
         }
 
+        //VERIFICATION
         private void btnElim_Click(object sender, EventArgs e)
         {
-            idUsuario = Convert.ToInt32(CoEliEmpl.SelectedItem.ToString());
-            TU.EliminarEmp(idUsuario);
-            VerEmpleado n = new VerEmpleado();
-            this.Hide();
-            n.Show();
+            if (CoEliEmpl.SelectedIndex > -1)
+            {
+                idUsuario = Convert.ToInt32(CoEliEmpl.SelectedItem.ToString());
+                TU.EliminarEmp(idUsuario);
+                VerEmpleado n = new VerEmpleado();
+                this.Hide();
+                n.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un ID de empleado");
+            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

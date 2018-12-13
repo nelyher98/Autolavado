@@ -21,14 +21,23 @@ namespace Autolavado
             InitializeComponent();
         }
 
+
+        //VERIFICATION
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string g;
-            g = CBEliminar.SelectedItem.ToString();
-            TU.EliminarPlac(g);
-            Eliminada E = new Eliminada();
-            E.Visible = true;
-            this.Visible = false;
+            if (CBEliminar.SelectedIndex > -1)
+            {
+                string g;
+                g = CBEliminar.SelectedItem.ToString();
+                TU.EliminarPlac(g);
+                Eliminada E = new Eliminada();
+                E.Visible = true;
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un ID de empleado");
+            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

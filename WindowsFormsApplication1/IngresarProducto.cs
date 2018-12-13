@@ -40,6 +40,7 @@ namespace Autolavado
             this.Visible = false;
         }
 
+        //VERIFICATION
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text != " " && txtCantidad.Text != "" && txtPrecio.Text != " ")

@@ -48,13 +48,21 @@ namespace Autolavado
             n.Show();
         }
 
+        //VERIFICATION
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string id = CBEliminar.SelectedItem.ToString();
-            t.EliminarAdm(id);
-            VerAdm n = new VerAdm();
-            this.Hide();
-            n.Show();
+            if (CBEliminar.SelectedIndex > -1)
+            {
+                string id = CBEliminar.SelectedItem.ToString();
+                t.EliminarAdm(id);
+                VerAdm n = new VerAdm();
+                this.Hide();
+                n.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un ID de usuario");
+            }
         }
     }
 }
